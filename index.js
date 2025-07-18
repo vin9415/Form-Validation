@@ -84,7 +84,7 @@ submitButton.addEventListener("click", (event) => {
     if (!emailRegex.test(email)){
       emailTarget.classList.add("error")
       errorMessages[2].classList.remove("d-none");
-      eFlag = flase;
+      eFlag = false;
     }else{
       emailTarget.classList.remove("error")
       errorMessages[2].classList.add("d-none");
@@ -110,7 +110,8 @@ submitButton.addEventListener("click", (event) => {
 
   if (fnFlag && lnFlag && eFlag && pwdFlag){
     fnTarget.value = lnTarget.value = emailTarget.value = pwdTarget.value = "";
-    window.location.href = "/success.html"
+    window.location.href = "success.html";
+
   }
 
 });
